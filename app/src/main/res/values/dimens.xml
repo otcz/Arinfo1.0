@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="escanear">40sp</dimen>
+    <dimen name="titulo_pequeno">10sp</dimen>
+</resources>
