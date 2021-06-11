@@ -41,10 +41,12 @@ public class MainActivity extends AppCompatActivity {
                 integrator.setBeepEnabled(true);
                 integrator.setBarcodeImageEnabled(true);
                 integrator.initiateScan();
+                integrator.notify();
                 cargarLibros("2,BAGAL,2150");
                 System.out.println(hojaExcelUnidad.getHoja().getName());
                 System.out.println(hojaExcelUnidad.getSerial());
-
+                Intent intent = new Intent(v.getContext(), Informacion.class);
+                startActivity(intent);
             }
         });
     }
