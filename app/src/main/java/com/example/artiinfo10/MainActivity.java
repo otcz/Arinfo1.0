@@ -21,16 +21,16 @@ import jxl.Workbook;
 
 public class MainActivity extends AppCompatActivity {
     Button btnBuscar;
-    TextView texResultado;
     HojaExcelUnidad hojaExcelUnidad;
     String div, unidad, serial;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnBuscar = findViewById(R.id.btn_buscar);
-        // texResultado = findViewById(R.id.tex_resultado);
         btnBuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,15 +41,16 @@ public class MainActivity extends AppCompatActivity {
                 integrator.setBeepEnabled(true);
                 integrator.setBarcodeImageEnabled(true);
                 integrator.initiateScan();
-                integrator.notify();
+
                 cargarLibros("2,BAGAL,2150");
-                System.out.println(hojaExcelUnidad.getHoja().getName());
-                System.out.println(hojaExcelUnidad.getSerial());
-                Intent intent = new Intent(v.getContext(), Informacion.class);
-                startActivity(intent);
+
+                //Intent intent = new Intent(v.getContext(), Informacion.class);
+                //startActivity(intent);
+
             }
         });
     }
+
 
     protected void onActivityResult(int requesCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requesCode, resultCode, data);
@@ -58,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Lectura Cancelada", Toast.LENGTH_LONG).show();
             } else {
                 Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
-                texResultado.setText(result.getContents());
+               Intent intent = new Intent(this, Informacion.class);
+               startActivity(intent);
             }
         } else {
             super.onActivityResult(requesCode, resultCode, data);
