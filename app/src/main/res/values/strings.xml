@@ -3,7 +3,10 @@
     <string name="escanear">Escanear código de sistema</string>
     <string name="cafue">COMANDO DE APOYO DE FUEGOS DEL EJÉRCITO NACIONAL</string>
     <string name="title_informacion_1">INFORMACIÓN BÁSICA DEL SISTEMA </string>
-
+    <string name="todo">TODO</string>
+    <string name="dato1"> Dato 1</string>
+    <string name="dato2"> Dato 2</string>
+    <string name="tipoDato">Tipo de dato</string>
 
 
 

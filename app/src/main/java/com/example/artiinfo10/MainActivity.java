@@ -1,6 +1,8 @@
 package com.example.artiinfo10;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.res.AssetManager;
@@ -10,20 +12,23 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.artiinfo10.CardView.ListAdapter;
+import com.example.artiinfo10.CardView.ListElement;
 import com.example.artiinfo10.excel.control.HojaExcelUnidad;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import jxl.Sheet;
 import jxl.Workbook;
 
 public class MainActivity extends AppCompatActivity {
     Button btnBuscar;
-    HojaExcelUnidad hojaExcelUnidad;
+    public static HojaExcelUnidad hojaExcelUnidad;
     String div, unidad, serial;
-
 
 
     @Override
@@ -41,16 +46,13 @@ public class MainActivity extends AppCompatActivity {
                 integrator.setBeepEnabled(true);
                 integrator.setBarcodeImageEnabled(true);
                 integrator.initiateScan();
+                cargarLibros("2,BAGAL,TR-07");
 
-                cargarLibros("2,BAGAL,2150");
-
-                //Intent intent = new Intent(v.getContext(), Informacion.class);
-                //startActivity(intent);
 
             }
         });
-    }
 
+    }
 
     protected void onActivityResult(int requesCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requesCode, resultCode, data);
@@ -59,8 +61,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Lectura Cancelada", Toast.LENGTH_LONG).show();
             } else {
                 Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
-               Intent intent = new Intent(this, Informacion.class);
-               startActivity(intent);
+                Intent intent = new Intent(this, Informacion.class);
+                startActivity(intent);
+
+
             }
         } else {
             super.onActivityResult(requesCode, resultCode, data);
@@ -111,7 +115,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println(sheet.getName());
         return sheet;
     }
 
