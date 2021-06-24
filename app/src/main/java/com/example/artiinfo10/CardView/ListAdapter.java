@@ -56,17 +56,15 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            iconView = itemView.findViewById(R.id.iconView);
+            //iconView = itemView.findViewById(R.id.iconView);
             tipoDato = itemView.findViewById(R.id.tipoData);
-            dato1 = itemView.findViewById(R.id.dato1);
-            dato2 = itemView.findViewById(R.id.dato2);
+
         }
 
         void bindData(final ListElement item) {
-            iconView.setColorFilter(Color.parseColor(item.getColor()), PorterDuff.Mode.SRC_IN);
-            tipoDato.setText(item.tipoDato);
-            dato1.setText(item.dato1);
-            dato2.setText(item.dato2);
+          //  iconView.setColorFilter(Color.parseColor(item.getColor()), PorterDuff.Mode.SRC_IN);
+          tipoDato.setText(item.tipoDato);
+
         }
     }
 }

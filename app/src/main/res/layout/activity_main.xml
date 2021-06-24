@@ -22,6 +22,7 @@
 
     <ImageView
         android:id="@+id/iv_cafue"
+
         android:layout_width="303dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -43,7 +44,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:text="@string/cafue"
-        android:textColor="@color/azul"
+        android:textColor="@color/black"
         android:textSize="@dimen/titulo_pequeno"
         android:textStyle="bold" />
 

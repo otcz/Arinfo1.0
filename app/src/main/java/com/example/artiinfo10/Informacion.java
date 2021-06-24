@@ -26,16 +26,13 @@ public class Informacion extends AppCompatActivity {
         InformacionSistema informacionSistema = new InformacionSistema(MainActivity.hojaExcelUnidad);
         textTitulo.setText(informacionSistema.getNombreSistema());
         elements = new ArrayList<>();
-        elements.add(new ListElement("GENERAL", "DATO 11", "DATO 22", "#775447"));
-        elements.add(new ListElement("GENERAL", "DATO 11", "DATO 22", "#775447"));
-        elements.add(new ListElement("GENERAL", "DATO 11", "DATO 22", "#FFFFFF"));
-        elements.add(new ListElement("GENERAL", "DATO 11", "DATO 22", "#775447"));
-        elements.add(new ListElement("GENERAL", "DATO 11", "DATO 22", "#FFFFFF"));
-        elements.add(new ListElement("GENERAL", "DATO 11", "DATO 22", "#775447"));
-        elements.add(new ListElement("GENERAL", "DATO 11", "DATO 22", "#FFFFFF"));
-        elements.add(new ListElement("GENERAL", "DATO 11", "DATO 22", "#775447"));
-        elements.add(new ListElement("GENERAL", "DATO 11", "DATO 22", "#FFFFFF"));
-        elements.add(new ListElement("GENERAL", "DATO 11", "DATO 22", "#775447"));
+        elements.add(new ListElement("INFORMACI\u00D3N B\u00C1SICA", "#775447"));
+        elements.add(new ListElement("DATOS T\u00C9CNICOS", "#775447"));
+        elements.add(new ListElement("MUNICI\u00D3N", "#FFFFFF"));
+        elements.add(new ListElement("HISTORICO", "#775447"));
+        elements.add(new ListElement("MANTENIMIENTO", "#FFFFFF"));
+        elements.add(new ListElement("FICHA BIOGRAFICA DEL COMANDATE", "#775447"));
+
 
         ListAdapter listAdapter = new ListAdapter(elements, this);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
