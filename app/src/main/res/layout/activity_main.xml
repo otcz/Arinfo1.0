@@ -17,6 +17,7 @@
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="260dp"
         android:background="@drawable/button_redondo"
+        android:elevation="20dp"
         android:text="@string/escanear"
         android:textColor="@color/blanco" />
 
@@ -42,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
         android:gravity="center"
         android:text="@string/cafue"
         android:textColor="@color/black"

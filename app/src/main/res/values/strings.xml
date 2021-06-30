@@ -6,6 +6,30 @@
     <string name="dato1"> Dato 1</string>
     <string name="dato2"> Dato 2</string>
     <string name="tipoDato">Tipo de dato</string>
+    <string name="municion">MUNICIÓN</string>
+    <string name="MUNICION">TIPO DE MUNICIÓN</string>
+    <string name="DP_UNIDAD">DEPOSITO UNIDAD TACTICA</string>
+    <string name="DP_BRIGADA">DEPOSITO UNIDAD BRIGADA</string>
+    <string name="DP_DIVISION">DEPOSITO UNIDAD DIVISIONARIO</string>
+
+    <string name="NUMERO_CERO">0</string>
+    <string name="TIPO_MUNICION">TIPO MUNICIÓN</string>
+
+    <string name="HISTORICO">HISTÓRICO</string>
+
+    <string name="NUMEROSERIE">NUMERO SERIE</string>
+    <string name="ESTADOMAYOR">ESTADO OPERATIVO</string>
+    <string name="LINEAMANDO">LÍNEA MANDO</string>
+    <string name="UBICACION">UBICACIÓN</string>
+
+    <string name="FECHA_ULTIMO">FECHA ULTIMO DISPARO</string>
+    <string name="CANTIDAD_DISPARO">CANTIDAD MUNICIÓN</string>
+
+
+
+
+
+
 
 
 

@@ -14,7 +14,7 @@ import com.example.artiinfo10.excel.control.InformacionSistema;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Informacion extends AppCompatActivity {
+public class Informacion extends AppCompatActivity  {
     List<ListElement> elements;
     TextView textTitulo;
 
@@ -23,13 +23,13 @@ public class Informacion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacion);
         textTitulo = findViewById(R.id.texTitulo);
+
         InformacionSistema informacionSistema = new InformacionSistema(MainActivity.hojaExcelUnidad);
-        textTitulo.setText(informacionSistema.getNombreSistema());
+        textTitulo.setText(informacionSistema.getsNombreSistema());
         elements = new ArrayList<>();
         elements.add(new ListElement("INFORMACI\u00D3N B\u00C1SICA", "#775447"));
         elements.add(new ListElement("DATOS T\u00C9CNICOS", "#775447"));
         elements.add(new ListElement("MUNICI\u00D3N", "#FFFFFF"));
-        elements.add(new ListElement("HISTORICO", "#775447"));
         elements.add(new ListElement("MANTENIMIENTO", "#FFFFFF"));
         elements.add(new ListElement("FICHA BIOGRAFICA DEL COMANDATE", "#775447"));
 
@@ -40,4 +40,6 @@ public class Informacion extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(listAdapter);
     }
+
+
 }

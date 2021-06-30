@@ -15,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name=".Informacion"></activity>
+        <activity android:name=".Municion"></activity>
+        <activity android:name=".InformacionBasicaSistema" />
+        <activity android:name=".Informacion" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
