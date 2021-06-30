@@ -60,7 +60,7 @@ public class Municion extends AppCompatActivity {
             tvMunicionUnidadTactica2.setVisibility(View.INVISIBLE);
             tvMunicionBrigada2.setVisibility(View.INVISIBLE);
             tvMunicionDivision2.setVisibility(View.INVISIBLE);
-            
+
         } else {
             tvTipoMunicion2.setText(informacionSistema.getsTipoMunicion2());
             tvMunicionUnidadTactica2.setText(informacionSistema.getsMunicionUnidadTactica2());
