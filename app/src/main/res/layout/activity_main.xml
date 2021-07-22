@@ -16,7 +16,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="260dp"
-        android:background="@drawable/button_redondo"
+        android:background="@drawable/button_redondo_negro"
         android:elevation="20dp"
         android:text="@string/escanear"
         android:textColor="@color/blanco" />

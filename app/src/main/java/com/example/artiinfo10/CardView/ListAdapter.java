@@ -15,6 +15,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.artiinfo10.InformacionBasicaSistema;
+import com.example.artiinfo10.Mantenimiento;
 import com.example.artiinfo10.Municion;
 import com.example.artiinfo10.R;
 
@@ -88,6 +89,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
                 break;
                 case 2: {
                     Intent intent = new Intent(v.getContext(), Municion.class);
+                    v.getContext().startActivity(intent);
+                }
+                break;
+                case 3: {
+                    Intent intent = new Intent(v.getContext(), Mantenimiento.class);
                     v.getContext().startActivity(intent);
                 }
                 break;

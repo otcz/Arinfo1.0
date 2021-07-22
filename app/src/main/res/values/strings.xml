@@ -26,12 +26,11 @@
     <string name="FECHA_ULTIMO">FECHA ULTIMO DISPARO</string>
     <string name="NUMEROAPOYOSFUEGOS">NÚMERO DE APOYOS DE FUEGOS</string>
 
+    <string name="PEDIRMANTENIMIENTO">PEDIR MANTENIMIENTO</string>
 
 
+    <string name="FECHAULTIMOMANTENIMIENTO">FECHA ULTIMO MANTENIMIENTO</string>
+    <string name="NIVELMANTENIMIENTO">NIVEL MANTENIMIENTO</string>
 
-
-
-
-
-
+    <string name="NIVEL_1">NIVEL I</string>
 </resources>

@@ -17,13 +17,11 @@ public class Municion extends AppCompatActivity {
                 tvTipoMunicion2, tvMunicionUnidadTactica2, tvMunicionBrigada2, tvMunicionDivision2,
                 tvTipoMunicionTitle2, tvMunicionUnidadTacticaTitle2, tvMunicionBrigadaTitle2, tvMunicionDivisionTitle2, tvTipomunicion, tvUbicacion;
 
-        CardView cardView;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_municion);
         InformacionSistema informacionSistema = new InformacionSistema(MainActivity.hojaExcelUnidad);
 
-        cardView = findViewById(R.id.cv_municion1);
 
         tvTipoMunicion1 = findViewById(R.id.tv_tipo_municion_1);
         tvMunicionUnidadTactica1 = findViewById(R.id.tv_dpo_unidad_tactico_1);
@@ -41,7 +39,7 @@ public class Municion extends AppCompatActivity {
         tvMunicionBrigadaTitle2 = findViewById(R.id.tv_dpo_unidad_brigada_title_2);
         tvMunicionDivisionTitle2 = findViewById(R.id.tv_dpo_unidad_division_title_2);
 
-        tvTipomunicion = findViewById(R.id.tv_numero_apoyo);
+        tvTipomunicion = findViewById(R.id.tv_fecha_ultimo_mantenimiento);
         tvUbicacion = findViewById(R.id.tv_ubicacion);
 
 

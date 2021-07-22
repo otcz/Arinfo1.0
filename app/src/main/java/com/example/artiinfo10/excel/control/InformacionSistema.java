@@ -1,10 +1,12 @@
 package com.example.artiinfo10.excel.control;
 
+import android.widget.TextView;
+
 public class InformacionSistema {
     private HojaExcelUnidad hojaExcelUnidad;
     int coutSistemaEncontrado = 0;
     String sNombreSistema, sNumeroSerial, sEstadoOperativo, sLineaMando, sUbicacion, sTipoMunicion1,sTipoMunicion2, sMunicionUnidadTactica1, sMunicionBrigada1, sMunicionDivision1,
-            sMunicionUnidadTactica2,sMunicionBrigada2, sMunicionDivision2, sNumeroApoyoFuegos;
+            sMunicionUnidadTactica2,sMunicionBrigada2, sMunicionDivision2, sNumeroApoyoFuegos, sFechaUltimoMantenimiento, sNivelMantenimiento;;
 
     public InformacionSistema(HojaExcelUnidad hojaExcelUnidad) {
         this.hojaExcelUnidad = hojaExcelUnidad;
@@ -29,8 +31,10 @@ public class InformacionSistema {
         setsMunicionBrigada2(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[36].getContents());
         setsMunicionDivision2(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[37].getContents());
 
-
         setsNumeroApoyoFuegos("0");
+
+        setsFechaUltimoMantenimiento(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[38].getContents());
+        setsNivelMantenimiento(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[39].getContents());
 
     }
 
@@ -172,5 +176,19 @@ public class InformacionSistema {
         this.sNumeroApoyoFuegos = sNumeroApoyoFuegos;
     }
 
+    public String getsFechaUltimoMantenimiento() {
+        return sFechaUltimoMantenimiento;
+    }
 
+    public void setsFechaUltimoMantenimiento(String sFechaUltimoMantenimiento) {
+        this.sFechaUltimoMantenimiento = sFechaUltimoMantenimiento;
+    }
+
+    public String getsNivelMantenimiento() {
+        return sNivelMantenimiento;
+    }
+
+    public void setsNivelMantenimiento(String sNivelMantenimiento) {
+        this.sNivelMantenimiento = sNivelMantenimiento;
+    }
 }

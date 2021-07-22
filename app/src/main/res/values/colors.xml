@@ -9,4 +9,6 @@
     <color name="gris">#01579B</color>
     <color name="blanco">#FFFFFFFF</color>
     <color name="azul">#2196F3</color>
+    <color name="basico">#616161</color>
+
 </resources>
