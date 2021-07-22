@@ -4,7 +4,7 @@ public class InformacionSistema {
     private HojaExcelUnidad hojaExcelUnidad;
     int coutSistemaEncontrado = 0;
     String sNombreSistema, sNumeroSerial, sEstadoOperativo, sLineaMando, sUbicacion, sTipoMunicion1,sTipoMunicion2, sMunicionUnidadTactica1, sMunicionBrigada1, sMunicionDivision1,
-            sMunicionUnidadTactica2,sMunicionBrigada2, sMunicionDivision2,sFechaUltimoDisparo, sTipomunicion,scantidadMunicion,sUbicacionHitorico;
+            sMunicionUnidadTactica2,sMunicionBrigada2, sMunicionDivision2, sNumeroApoyoFuegos;
 
     public InformacionSistema(HojaExcelUnidad hojaExcelUnidad) {
         this.hojaExcelUnidad = hojaExcelUnidad;
@@ -29,10 +29,9 @@ public class InformacionSistema {
         setsMunicionBrigada2(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[36].getContents());
         setsMunicionDivision2(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[37].getContents());
 
-        setsFechaUltimoDisparo(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[38].getContents());
-        setsTipomunicion(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[30].getContents());
-        setScantidadMunicion(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[31].getContents());
-        setsUbicacionHitorico(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[28].getContents());
+
+        setsNumeroApoyoFuegos("0");
+
     }
 
     public void encontrarSistema() {
@@ -164,35 +163,14 @@ public class InformacionSistema {
         this.sMunicionDivision2 = sMunicionDivision2;
     }
 
-    public String getsFechaUltimoDisparo() {
-        return sFechaUltimoDisparo;
+
+    public String getsNumeroApoyoFuegos() {
+        return sNumeroApoyoFuegos;
     }
 
-    public void setsFechaUltimoDisparo(String sFechaUltimoDisparo) {
-        this.sFechaUltimoDisparo = sFechaUltimoDisparo;
+    public void setsNumeroApoyoFuegos(String sNumeroApoyoFuegos) {
+        this.sNumeroApoyoFuegos = sNumeroApoyoFuegos;
     }
 
-    public String getsTipomunicion() {
-        return sTipomunicion;
-    }
 
-    public void setsTipomunicion(String sTipomunicion) {
-        this.sTipomunicion = sTipomunicion;
-    }
-
-    public String getScantidadMunicion() {
-        return scantidadMunicion;
-    }
-
-    public void setScantidadMunicion(String scantidadMunicion) {
-        this.scantidadMunicion = scantidadMunicion;
-    }
-
-    public String getsUbicacionHitorico() {
-        return sUbicacionHitorico;
-    }
-
-    public void setsUbicacionHitorico(String sUbicacionHitorico) {
-        this.sUbicacionHitorico = sUbicacionHitorico;
-    }
 }

@@ -17,13 +17,14 @@
 
     <string name="HISTORICO">HISTÓRICO</string>
 
-    <string name="NUMEROSERIE">NUMERO SERIE</string>
     <string name="ESTADOMAYOR">ESTADO OPERATIVO</string>
+    <string name="NUMEROSERIE">NUMERO SERIE</string>
+    <string name="CANTIDADGRANADAS">CANTIDAD GRANADAS</string>
     <string name="LINEAMANDO">LÍNEA MANDO</string>
     <string name="UBICACION">UBICACIÓN</string>
 
     <string name="FECHA_ULTIMO">FECHA ULTIMO DISPARO</string>
-    <string name="CANTIDAD_DISPARO">CANTIDAD MUNICIÓN</string>
+    <string name="NUMEROAPOYOSFUEGOS">NÚMERO DE APOYOS DE FUEGOS</string>
 
 
 

@@ -5,7 +5,6 @@ import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.artiinfo10.excel.control.InformacionSistema;
@@ -16,8 +15,7 @@ public class Municion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         TextView tvTipoMunicion1, tvMunicionUnidadTactica1, tvMunicionBrigada1, tvMunicionDivision1,
                 tvTipoMunicion2, tvMunicionUnidadTactica2, tvMunicionBrigada2, tvMunicionDivision2,
-                tvTipoMunicionTitle2, tvMunicionUnidadTacticaTitle2, tvMunicionBrigadaTitle2, tvMunicionDivisionTitle2,
-                tvFechaUltimoDisparo, tvTipomunicion, tvcantidadMunicion, tvUbicacion;
+                tvTipoMunicionTitle2, tvMunicionUnidadTacticaTitle2, tvMunicionBrigadaTitle2, tvMunicionDivisionTitle2, tvTipomunicion, tvUbicacion;
 
         CardView cardView;
 
@@ -43,9 +41,7 @@ public class Municion extends AppCompatActivity {
         tvMunicionBrigadaTitle2 = findViewById(R.id.tv_dpo_unidad_brigada_title_2);
         tvMunicionDivisionTitle2 = findViewById(R.id.tv_dpo_unidad_division_title_2);
 
-        tvFechaUltimoDisparo = findViewById(R.id.tv_fecha_ultimo_disparo);
-        tvTipomunicion = findViewById(R.id.tv_tipo_municion);
-        tvcantidadMunicion = findViewById(R.id.tv_cantidad_municion);
+        tvTipomunicion = findViewById(R.id.tv_numero_apoyo);
         tvUbicacion = findViewById(R.id.tv_ubicacion);
 
 
@@ -73,11 +69,8 @@ public class Municion extends AppCompatActivity {
         tvMunicionUnidadTactica1.setText(informacionSistema.getsMunicionUnidadTactica1());
         tvMunicionBrigada1.setText(informacionSistema.getsMunicionBrigada1());
         tvMunicionDivision1.setText(informacionSistema.getsMunicionDivision1());
+        tvTipomunicion.setText(informacionSistema.getsNumeroApoyoFuegos());
 
-        tvFechaUltimoDisparo.setText(informacionSistema.getsFechaUltimoDisparo());
-        tvTipomunicion.setText(informacionSistema.getsTipomunicion());
-        tvcantidadMunicion.setText(informacionSistema.getScantidadMunicion());
-        tvUbicacion.setText(informacionSistema.getsUbicacionHitorico());
 
 
 
