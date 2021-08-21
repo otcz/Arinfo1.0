@@ -1,12 +1,11 @@
 package com.example.artiinfo10.excel.control;
 
-import android.widget.TextView;
-
 public class InformacionSistema {
     private HojaExcelUnidad hojaExcelUnidad;
     int coutSistemaEncontrado = 0;
-    String sNombreSistema, sNumeroSerial, sEstadoOperativo, sLineaMando, sUbicacion, sTipoMunicion1,sTipoMunicion2, sMunicionUnidadTactica1, sMunicionBrigada1, sMunicionDivision1,
-            sMunicionUnidadTactica2,sMunicionBrigada2, sMunicionDivision2, sNumeroApoyoFuegos, sFechaUltimoMantenimiento, sNivelMantenimiento;;
+    String sNombreSistema, sNumeroSerial, sEstadoOperativo, sLineaMando, sUbicacion, sTipoMunicion1, sTipoMunicion2, sMunicionUnidadTactica1, sMunicionBrigada1, sMunicionDivision1,
+            sMunicionUnidadTactica2, sMunicionBrigada2, sMunicionDivision2, sNumeroApoyoFuegos, sFechaUltimoMantenimiento, sNivelMantenimiento,
+            sCDTEBateria,sTelefonoCDTEBateria, sCDTESistema, sTelefonoCDTESistema, sCertificadoESART, sFechaUltimoReentrenamiento, sFechaUltimoCurso, sUltimoCurso;
 
     public InformacionSistema(HojaExcelUnidad hojaExcelUnidad) {
         this.hojaExcelUnidad = hojaExcelUnidad;
@@ -35,6 +34,16 @@ public class InformacionSistema {
 
         setsFechaUltimoMantenimiento(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[38].getContents());
         setsNivelMantenimiento(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[39].getContents());
+
+
+        setsCDTEBateria(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[54].getContents());
+        setsCDTESistema(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[49].getContents());
+        setsTelefonoCDTESistema(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[18].getContents());
+        setsTelefonoCDTEBateria(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[55].getContents());
+        setsCertificadoESART(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[50].getContents());
+        setsFechaUltimoReentrenamiento(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[51].getContents());
+        setsUltimoCurso(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[52].getContents());
+        setsFechaUltimoCurso(hojaExcelUnidad.getHoja().getRow(getCoutSistemaEncontrado())[53].getContents());
 
     }
 
@@ -190,5 +199,69 @@ public class InformacionSistema {
 
     public void setsNivelMantenimiento(String sNivelMantenimiento) {
         this.sNivelMantenimiento = sNivelMantenimiento;
+    }
+
+    public String getsCDTEBateria() {
+        return sCDTEBateria;
+    }
+
+    public void setsCDTEBateria(String sCDTEBateria) {
+        this.sCDTEBateria = sCDTEBateria;
+    }
+
+    public String getsCDTESistema() {
+        return sCDTESistema;
+    }
+
+    public void setsCDTESistema(String sCDTESistema) {
+        this.sCDTESistema = sCDTESistema;
+    }
+
+    public String getsTelefonoCDTESistema() {
+        return sTelefonoCDTESistema;
+    }
+
+    public void setsTelefonoCDTESistema(String sTelefonoCDTESistema) {
+        this.sTelefonoCDTESistema = sTelefonoCDTESistema;
+    }
+
+    public String getsCertificadoESART() {
+        return sCertificadoESART;
+    }
+
+    public void setsCertificadoESART(String sCertificadoESART) {
+        this.sCertificadoESART = sCertificadoESART;
+    }
+
+    public String getsFechaUltimoReentrenamiento() {
+        return sFechaUltimoReentrenamiento;
+    }
+
+    public void setsFechaUltimoReentrenamiento(String sFechaUltimoReentrenamiento) {
+        this.sFechaUltimoReentrenamiento = sFechaUltimoReentrenamiento;
+    }
+
+    public String getsFechaUltimoCurso() {
+        return sFechaUltimoCurso;
+    }
+
+    public void setsFechaUltimoCurso(String sFechaUltimoCurso) {
+        this.sFechaUltimoCurso = sFechaUltimoCurso;
+    }
+
+    public String getsUltimoCurso() {
+        return sUltimoCurso;
+    }
+
+    public void setsUltimoCurso(String sUltimoCurso) {
+        this.sUltimoCurso = sUltimoCurso;
+    }
+
+    public String getsTelefonoCDTEBateria() {
+        return sTelefonoCDTEBateria;
+    }
+
+    public void setsTelefonoCDTEBateria(String sTelefonoCDTEBateria) {
+        this.sTelefonoCDTEBateria = sTelefonoCDTEBateria;
     }
 }
