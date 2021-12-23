@@ -29,7 +29,7 @@
                 android:layout_width="105dp"
                 android:layout_height="70dp"
                 android:contentDescription="@string/tipoDato"
-                app:srcCompat="@drawable/ic_imagneinformacion" />
+                app:srcCompat="@drawable/icon1" />
 
             <TextView
                 android:id="@+id/tipoData"
